@@ -4,10 +4,24 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label "이메일" %><br />
+    <%= f.email_field :email, autofocus: true,  autocomplete: "email" %>
   </div>
-
+ 
+  <div class="field">
+    <%= f.label "이름" %><br />
+    <%= f.text_field :name %>
+  </div>
+  
+  <div class="field">
+    <%= f.label "학교" %><br />
+    <%= f.text_field :college %>
+  </div>
+  
+  <div class="field">
+    <%= f.label "학과" %><br />
+    <%= f.text_field :major %>
+  </div>
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
