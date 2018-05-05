@@ -12,9 +12,13 @@
 	
 	<%@professors.each do |p|%>
 		<tr>	
-			<td><%=p.name%></td>
+			<td><a href = "/home/new_score/<%=p.id%>"><%=p.name%></a></td>
 			<td><%=p.college%></td>
 			<td><%=p.major%></td>
+			<%p.scores.each do |s|%>
+				<td><%=s.attend%></td>
+			<%end%>
+			
 		</tr>
 	<%end%>
 		

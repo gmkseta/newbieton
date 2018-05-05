@@ -12,9 +12,20 @@ class HomeController < ApplicationController
     redirect_to :root
   end
   def new_score
+  end
+  def create_score
     score = Score.new
     score.attend = params[:attend]
+    score.sleep = params[:sleep]
+    score.lect_sys = params[:lect_sys]
+    score.hw_fre = params[:hw_fre]
+    score.hw_lvl = params[:hw_lvl]
+    score.qz_fre = params[:qz_fre]
+    score.qz_lvl = params[:qz_lvl]
+    score.tst_jjok = params[:tst_jjok]
+    score.tst_lvl = params[:tst_lvl]
+    score.save
     
-    Score.create(attend:params[:attend],sleep:params[:sleep],lect_sys:params[:lect_sys],hw_fre:params[:hw_fre],hw_lvl:params[:hw_lvl],qz_fre:params[:qz_fre],qz_lvl:params[:qz_lvl],tst_jjok:params[:tst_jjok],tst_lvl:params[:tst_lvl])
+    redirect_to :root
   end
 end

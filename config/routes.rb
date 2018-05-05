@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'home/new_score'
   
   post 'home/create_pro'
+  post 'home/create_score'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
