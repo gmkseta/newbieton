@@ -12,12 +12,10 @@
 	
 	<%@professors.each do |p|%>
 		<tr>	
-			<td><a href = "/home/new_score/<%=p.id%>"><%=p.name%></a></td>
+			<td><a href = "/home/show/<%=p.id%>"><%=p.name%></a></td>
 			<td><%=p.college%></td>
 			<td><%=p.major%></td>
-			<%p.scores.each do |s|%>
-				<td><%=s.attend%></td>
-			<%end%>
+			<td><a href = "/home/new_score/<%=p.id%>">평가하기</a></td>
 			
 		</tr>
 	<%end%>

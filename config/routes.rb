@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   get 'home/join'
   
   get 'home/new_pro'
-  get 'home/new_score'
+  get 'home/new_score/:pro_id'=>'home#new_score'
+  get 'home/show/:pro_id'=>"home#show"
+  
   
   post 'home/create_pro'
   post 'home/create_score'
